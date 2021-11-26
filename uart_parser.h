@@ -7,11 +7,19 @@
 
 #include "usart.h"
 
-typedef void (* UartParserCommandCallback)(char *);
+#ifdef __cplusplus
+extern "C"{
+#endif
 
-void uart_parser_init(UART_HandleTypeDef *huart);
-void uart_parser_add_command(char command, UartParserCommandCallback callback_func_pointer, char *label);
-void uart_parser_scalar(float* value, char *cmd);
-void uart_parser_output(char *output, UART_HandleTypeDef *huart);
+    typedef void (* UartParserCommandCallback)(char *);
+
+    void uart_parser_init(UART_HandleTypeDef *huart);
+    void uart_parser_add_command(char command, UartParserCommandCallback callback_func_pointer, char *label);
+    void uart_parser_scalar(float* value, char *cmd);
+    void uart_parser_output(char *output, UART_HandleTypeDef *huart);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //HAL_UART_PARSER_UART_PARSER_H
