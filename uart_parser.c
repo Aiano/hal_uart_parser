@@ -72,3 +72,7 @@ void uart_parser_scalar(float* value, char *cmd){
         *value = atof(cmd);
     }
 }
+
+void uart_parser_output(char *output, UART_HandleTypeDef *huart){
+    HAL_UART_Transmit(huart, output, sizeof(output), 0xFF);
+}
