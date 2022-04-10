@@ -103,7 +103,7 @@ void uart_parser_add_command(char command, UartParserCommandCallback callback_fu
 }
 
 /**
- * @brief 把字符类型cmd转化为浮点值value
+ * @brief 把字符类型cmd转化为浮点值value，用来修改对应的变量，可以实现在线调参
  * @param value
  * @param cmd
  */
