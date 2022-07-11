@@ -26,7 +26,7 @@ UART_HandleTypeDef huart1;
 ### 串口发送数据：
 
 ```c++
-HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t
+HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t)
 ```
 
 功能：**串口****发送指定长度的数据。如果超时没发送完成，则不再发送，返回超时标志（HAL_TIMEOUT）。**
